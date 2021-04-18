@@ -19,7 +19,7 @@ jobs:
       - name: build game
         run: |
           go get github.com/tmedwards/tweego
-          eport PATH=$PATH:$(go env GOPATH)/bin
+          export PATH=$PATH:$(go env GOPATH)/bin
           tweego TrialTheRuins.twee -o dist/index.html
       
       - name: Deploy 
